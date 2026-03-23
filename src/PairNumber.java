@@ -7,27 +7,23 @@ public class PairNumber {
 Ejemplo:
 Entrada: 10
 Salida: 2 + 4 + 6 + 8 + 10 = 30*/
-        String formato="";
-        int resultado=0;
-        while (true){
-            try{
-                int num=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresa un numero"));
-                for (int i=2;i<=num;i+=2){
-                    resultado+=i;
-                    if (i==2){
-                        formato+=i;
-                    }else {
-                        formato+=" + "+i;
-                    }
-
-                }
-                JOptionPane.showMessageDialog(null,"El resultado es: \n"+formato+" = "+resultado);
-                break;
-            }catch (NumberFormatException e){
-                JOptionPane.showMessageDialog(null,"Ingrese solo numeros");
+        int num1=Integer.parseInt(JOptionPane.showInputDialog("num 1"));
+        int suma=0;
+        String format="";
+        for (int i = 2; i <num1+1 ; i+=2) {
+            suma+=i;
+            if(num1%2==0){
+                format+=i+"+";
+            }
+            if(i==2){
+                format+=i;
+            }else {
+                format+=i;
             }
 
         }
+        JOptionPane.showMessageDialog(null,"suma"+" "+format+"="+suma);
+
 
     }
 }

@@ -8,12 +8,12 @@ public class CountDigit {
         12345 → 5 dígitos
          */
         String format="";
-        String numero= JOptionPane.showInputDialog("Ingresa un numero");
-        char Arreglo[]=numero.toCharArray();
-        for (int i = 0; i < Arreglo.length; i++) {
-            format+=Arreglo[i]+" , ";
-
+        int num=Integer.parseInt(JOptionPane.showInputDialog("Ingresa num: "));
+        char[] arr=String.valueOf(num).toCharArray();
+        for (int i = 0; i <arr.length ; i++) {
+            format+=arr[i]+ " ,";
         }
-        JOptionPane.showMessageDialog(null,"El numero tiene "+Arreglo.length+" Digitos :"+format);
+        JOptionPane.showMessageDialog(null,"Tiene"+arr.length+" digitos "+format);
+
     }
 }
